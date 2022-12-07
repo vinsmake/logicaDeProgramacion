@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de multiplicar</title>
+</head>
+<body>
+    <script>
+function breakLine() {
+    document.write("<br>");
+};
+function print(text) {
+    document.write(text);
+    breakLine();
+};
+
+let multiple = prompt("¿Que numero quieres multiplicar?");
+let multiplier = 1;
+print("WHILE LOOP");
+while (multiplier <= 10) {
+    print(multiple * multiplier);
+    multiplier ++; 
+};
+
+breakLine;
+
+/* let multiple = prompt("¿Que numero quieres multiplicar?");
+for (let multiplier =1; multiplier <= 10; multiplier = multiplier +1) {
+    print(multiple * multiplier);
+}; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// funciones inicio
+function breakLine() {
+    document.write("<br>");
+}
+function print(text) {
+    document.write(text);
+    breakLine();
+};
+
+print("Vinsmake");
+
+//calcular primer imc
+let peso = 85;
+let altura = 1.79;
+indice = peso / (altura*altura);
+
+print("El IMC de vinsmake es: " + indice)
+
+
+//convertir primer calculo en funcion
+function imc(peso, altura) {
+    i = ((peso)/(altura*altura));
+    return(i);
+}
+
+//imprimir funcion con datos escritos
+print("El IMC de Juan es: " + imc(82, 1.79));
+
+//imprimir funcion con variables
+peso = 80;
+altura = 1.79;
+print("El IMC de Arturo es: " + imc(80, 1.79));
+
+//imprimir automaticamente
+
+function printImc(nombre,peso,altura) {
+    imc = peso/(altura*altura);
+    print("el imc de " + nombre + " es de: " + imc);
+}
+
+printImc("Pedro",75,1.90);
+printImc("Nose",61,1.73);
+
+//imprimir 2 automaticamente
+
+function printImcP(nombre,peso,altura,nombre2,peso2,altura2) {
+    imc = peso/(altura*altura);
+    imc2 = peso2/(altura2*altura2);
+    promedio = (imc + imc2)/2;
+    print("El imc de " + nombre + " es de: " + imc + "<br>" + "El imc de la segunda persona, es decir " + nombre2 + "es de: " + imc2 + "<br>" + "El promedio de ambos pacientes es: " + promedio);
+}
+
+printImcP("Saul", 80, 1.75, "Enrique", 70, 1.79);
+
+//imprimir 2 automaticamente con 1 funcion
+
+function calculateImc (nombre,peso,altura) {
+    calculatedImc = peso / (altura*altura);
+    return calculatedImc;
+}
+
+let imcEnrique = calculateImc("Enrique",70, 1.79);
+let imcSaul = calculateImc("Saul",80, 1.75);
+print("El promedio de Saul y Enrique es de : " + (imcEnrique+imcSaul)/2);
+
+
+//imprimir interactuando con usuario
+/* function imcInformed (peso,altura) {
+    return peso / (altura*altura);
+}
+
+pesoInformado = prompt("Informe su peso");
+alturaInformada = prompt("Informe su altura");
+calculatedImc = imcInformed(pesoInformado,alturaInformada);
+
+print("El imc es de: " + calculatedImc); */
+
+//Imprimir con interaccion continua
+function Interaction (peso, altura) {
+    return peso / (altura*altura);
+}
+
+nombre = prompt("¡Hola! Yo te ayudaré a calcular tu IMC. Antes que nada, ¿Como te llamas?");
+pesoInteraction = prompt("Mucho gusto, " + nombre + ", Dime, ¿Cuál es tu peso?");
+alturaInteraction = prompt("Muy bien " + nombre + ", tienes un peso de " + pesoInteraction + ", Ahora dime, ¿Cual es tu altura?");
+imcInteraction = Interaction(pesoInteraction,alturaInteraction); 
+
+print(nombre + ",Tu IMC es de: " + imcInteraction + ",Permiteme darte algunas recomendaciones:");
+
+
+
+</script> 
+</body>
+</html>

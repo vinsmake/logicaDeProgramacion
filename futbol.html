@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>futbol js</title>
+</head>
+<body>
+    
+<script>
+
+function breakLine() {
+    document.write("<br>");
+}
+
+function print(text) {
+    document.write(text);
+    breakLine();
+}
+
+var victorias = parseInt(prompt("¿Cuantas victorias?"));
+var empates = parseInt(prompt("¿Cuantos empates?"));
+
+puntosTotal = ((victorias*3) + empates);
+
+print("Puntos totales: " + puntosTotal);
+
+if (puntosTotal > 28) {
+    print("El equipo tiene mas puntos que el año pasado");
+};
+
+if (puntosTotal < 28) {
+print("El equipo tiene menos puntos que el año pasado");
+};
+
+if (puntosTotal == 28) {
+print("El equipo tiene los mismos puntos que el año pasado");
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

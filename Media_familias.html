@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media edades familia</title>
+</head>
+<body>
+    <script>
+function breakLine() {
+    document.write("<br>");
+};
+function print(text) {
+    document.write(text);
+    breakLine();
+};
+
+let members = parseInt(prompt("¿Cuantos miembros tiene tu familia?"));
+let counter = 1;
+let totalAge = 0;
+while (counter <= members) {
+    let name = prompt("¿Como se llama?");
+    let age = parseInt(prompt("¿Que edad tiene?"));
+    print(name + " tiene " + age + " años");
+    totalAge = totalAge + age;
+    counter ++; 
+};
+
+print("Esa es toda la familia");
+print("El promedio de edad de la familia es de" + (totalAge/members));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla</title>
+</head>
+<body>
+
+<input type="text">
+<button>Verificar</button>
+
+
+    <script>
+function breakLine() {
+    document.write("<br>");
+};
+function print(text) {
+    document.write(text);
+    breakLine();
+};
+
+let text = document.querySelector("input"); //dom
+let btn = document.querySelector("button"); //dom
+text.focus(); //focus
+btn.onclick = verificar; //dom_btn_click
+
+
+
+function sortear(cantidad){
+    let numeros = []; //array
+    let contador = 1; //while random
+    while(contador <=cantidad){
+        aleatorioN = Math.round(Math.random()*10);
+        console.log(aleatorioN);
+            let repetido = false;
+        if (aleatorioN != 0) {
+            for (let index = 0; index < numeros.length; index++) {
+
+                if (aleatorioN == numeros[index]) {
+                    repetido = true;
+                    break;
+                }; //if_end
+                
+            }; //for_end
+        
+            if (repetido == false) {
+                numeros.push(aleatorioN);
+                contador++;
+            }; //if_end
+        };//evitar_0
+    }; //while_random_end
+    return numeros;
+}; //sortear_end
+
+
+let numeros = sortear(4); //sortear_exe
+console.log(numeros); //log array
+
+
+
+
+print("Tienes " + numeros.length + " Opciones para atinarle"); //print posibilidades
+
+function verificar() { //verificar con boton
+    let posicion = 0;
+    let encontrado = false;
+    while (posicion < numeros.length) { //while recorrer array
+        if (parseInt(text.value) == numeros[posicion]) { //if acertado
+            alert("Acertaste");
+            alert("El numero era: " + numeros);
+            encontrado = true;
+            break;
+            };
+            posicion++;
+    };
+    if (encontrado == false) { //if fracaso
+        alert("Fracasaste");
+        alert("El numero era: " + numeros);
+    };
+    text.value = "";
+    text.focus();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

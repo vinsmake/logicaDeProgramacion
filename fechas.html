@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fechas</title>
+</head>
+<body>
+    <script>
+function breakLine() {
+    document.write("<br>");
+};
+function print(text) {
+    document.write(text);
+    breakLine();
+};
+
+let evento = prompt("¿Que evento quieres calcular?");
+let year = parseInt(prompt("Desde que año ocurre " + evento));
+let frecuencia = parseInt(prompt("¿Cada cuantos años ocurre " + evento + " ?"));
+
+while (year <= 2022) {
+    print("Hubo " + evento + " en el año: " + year);
+    year = year + 4;
+};
+print("Esos han sido todos los " + evento);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

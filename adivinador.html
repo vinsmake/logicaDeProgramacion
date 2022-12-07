@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function breakLine() {
+    document.write("<br>");
+};
+function print(text) {
+    document.write(text);
+    breakLine();
+};
+
+
+let thought = Math.round(Math.random()*10);
+let counter = 1;
+let attempts = 5;
+
+    while (counter <= attempts) {
+        let selected = parseInt(prompt("¿En que numero del 1 al 10 estoy pensando?"));
+
+        if (selected == thought) {
+            print("wtf si le atinaste, y en el intento " + counter);
+            break;
+        }
+        else {
+            print("no bro, estaba pensando en el " + thought + " Piensale poquito, por dios.");
+        };
+        counter++;
+    };
+print("Juego terminado");
+    </script>
+</body>
+</html>
+

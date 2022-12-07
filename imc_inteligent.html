@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function breakLine() {
+    document.write("<br>");
+}
+function print(text) {
+    document.write(text);
+    breakLine();
+};
+
+function Interaction (peso, altura) {
+    return peso / (altura*altura);
+}
+
+nombre = prompt("¡Hola! Yo te ayudaré a calcular tu IMC. Antes que nada, ¿Como te llamas?");
+pesoInteraction = prompt("Mucho gusto, " + nombre + ", Dime, ¿Cuál es tu peso?");
+alturaInteraction = prompt("Muy bien " + nombre + ", tienes un peso de " + pesoInteraction + ", Ahora dime, ¿Cual es tu altura?");
+imcInteraction = Interaction(pesoInteraction,alturaInteraction); 
+
+print(nombre + ",Tu IMC es de: " + imcInteraction + ", Permiteme darte algunas recomendaciones:");
+
+if (imcInteraction < 18.5) {
+    print("Tu IMC está por debajo del 18.5, por lo cual tienes insuficiencia ponderal, te recomendamos mejorar tu alimentacion al agregar mas calorias, siempre recuerda comer frutas y verduras. Debido a tu bajo IMC, te recomendamos visitar a un nutriologo.")
+}
+if (imcInteraction >= 18.6 && imcInteraction < 25) {
+    print("Tu IMC está en el intervalo normal, ¡Felicidades!, Continúa con tu buena alimentacion y ejercicio.")
+}
+if (imcInteraction >= 25 && imcInteraction <=29.9) {
+    print("Tu IMC está por arriba de 25, por lo cual tiene sobre peso, te recomendamos mejorar tu alimentacion al reducir tu consumo de calorias, siempre recuerda comer frutas y verduras.")
+}
+
+if (imcInteraction >= 30) {
+    print("Tu IMC está por arriba de 30, por lo cual tienes obesidad, te recomendamos mejorar tu alimentacion al reducir tu consumo de calorias, siempre recuerda comer frutas y verduras. Debido a tu alto IMC, te recomendamos visitar a un nutriologo.")
+}
+
+
+
+    </script>
+</body>
+</html>
+
