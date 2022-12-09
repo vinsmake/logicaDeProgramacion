@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <h1>Canvas</h1>
+    <canvas width="600" height="400">
+    </canvas>
+
+<script>
+//primer canvas
+    let pantalla = document.querySelector("canvas"); //canvas
+    let pincel = pantalla.getContext("2d"); //contexto en 2D
+
+    pincel.fillStyle = "grey"; //color canvas
+    pincel.fillRect(0,0,600,400); //relleno canvas
+
+
+    function circulo(x,y,radio,color){
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI);
+        pincel.fill();
+    } //circulo_end
+
+    function limpiar(){
+        pincel.clearRect(0,0,600,400);
+    }; //limpiar_end
+
+    function aleatorio(x,y) {
+    circulo(x,y,30,"red");
+    circulo(x,y,20,"white");
+    circulo(x,y,10,"red");
+    }
+    
+    function posicion(max){
+        return Math.floor(Math.random()*max)
+    };
+
+    xPosicion = posicion(600);
+    yPosicion = posicion(400);
+
+    aleatorio(xPosicion,yPosicion);
+/*     for(let x= 20; x <580; x++) {
+        circulo(x,20,10);
+    }; //for_end
+ */
+
+</script>
+</body>
+</html>
